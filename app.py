@@ -53,7 +53,6 @@ def home():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-=======
 import os
 from flask import Flask, render_template, request
 import resend
