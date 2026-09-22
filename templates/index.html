@@ -85,14 +85,6 @@
         </script>
     </section>
 
-    {% if mensagem_sucesso %}
-    <div class="max-w-3xl mx-auto mt-12 px-6">
-        <div class="bg-emerald-50 border border-emerald-300 text-emerald-800 p-6 rounded-2xl text-center shadow-md">
-            <p class="text-lg font-medium">{{ mensagem_sucesso }}</p>
-        </div>
-    </div>
-    {% endif %}
-
     <!-- A EXPERIÊNCIA -->
     <section id="experiencia" class="py-24 px-6 max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -247,13 +239,25 @@
         </div>
     </section>
 
-    <!-- FORMULÁRIO DE RESERVAS -->
+    <!-- FORMULÁRIO DE RESERVAS COM BOTÃO DE WHATSAPP IMEDIATO -->
     <section id="reservas" class="py-24 px-6 max-w-3xl mx-auto">
         <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-lg">
             <div class="text-center mb-8 space-y-3">
                 <h2 class="serif-title text-3xl font-bold text-slate-900">Reserve a sua estadia T7</h2>
-                <p class="text-slate-600 text-sm">Preencha o formulário abaixo ou fale diretamente connosco.</p>
+                <p class="text-slate-600 text-sm">Preencha o formulário abaixo para gerar os detalhes para o WhatsApp.</p>
             </div>
+
+            <!-- MENSAGEM DE SUCESSO / BOTÃO DE WHATSAPP -->
+            {% if dados_reserva %}
+            <div class="mb-8 bg-emerald-50 border border-emerald-300 text-emerald-800 p-8 rounded-2xl text-center shadow-lg space-y-4">
+                <h3 class="text-xl font-bold">Obrigado, {{ dados_reserva.nome }}!</h3>
+                <p class="text-sm">Clique no botão abaixo para enviar o seu pedido de reserva detalhado diretamente para o WhatsApp do proprietário:</p>
+                <a href="{{ dados_reserva.whatsapp_url }}" target="_blank" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-8 py-4 rounded-xl transition shadow-md">
+                    <span>💬 Enviar Detalhes da Reserva via WhatsApp</span>
+                </a>
+            </div>
+            {% endif %}
+
             <div class="mb-10 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div class="text-center sm:text-left">
                     <h4 class="font-bold text-slate-900 text-base">Prefere falar primeiro sem compromisso?</h4>
@@ -263,6 +267,7 @@
                     💬 Abrir WhatsApp
                 </a>
             </div>
+
             <form method="POST" class="space-y-6">
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
@@ -271,7 +276,7 @@
                     </div>
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">Telemóvel (Contacto)</label>
-                        <input type="tel" name="telefone" required value="968 991 834" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
+                        <input type="tel" name="telefone" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
                     </div>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -299,7 +304,7 @@
                     <textarea name="mensagem" rows="4" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition" placeholder="Dúvidas sobre datas ou pedidos especiais..."></textarea>
                 </div>
                 <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-4 rounded-xl transition shadow-lg shadow-emerald-700/25">
-                    Enviar Pedido de Reserva
+                    Gerar Pedido para WhatsApp
                 </button>
             </form>
         </div>
