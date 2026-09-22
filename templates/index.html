@@ -9,7 +9,6 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
         .serif-title { font-family: 'Playfair Display', serif; }
-        .card-stack { perspective: 1000px; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white relative">
@@ -153,98 +152,56 @@
         </div>
     </section>
 
-    <!-- GALERIA INTERATIVA (SWIPE STACK) -->
-    <section id="galeria" class="py-24 px-6 max-w-4xl mx-auto text-center">
-        <div class="mb-12 space-y-4">
+    <!-- GALERIA HORIZONTAL COM SUPORTE TOTAL A TOQUE NO TELEMÓVEL -->
+    <section id="galeria" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-12 space-y-4">
             <span class="text-emerald-700 font-bold uppercase tracking-widest text-xs">Experiência Imersiva</span>
-            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-slate-900">Galeria Interativa</h2>
-            <p class="text-slate-600 text-sm">Arraste ou clique no cartão para ver a fotografia seguinte e saltar para o próximo espaço.</p>
+            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-slate-900">Galeria de Fotos</h2>
+            <p class="text-slate-600 text-sm">Arraste para o lado no telemóvel ou use o rato para explorar os espaços.</p>
         </div>
 
-        <div class="card-stack relative w-full max-w-xl mx-auto h-[450px] sm:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing" id="card-stack">
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 10;">
-                <img src="{{ url_for('static', filename='images/0.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Envolvência e Exterior</span></div>
+        <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-6" style="-webkit-overflow-scrolling: touch; scroll-behavior: smooth;">
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/0.jpeg') }}" alt="Foto 1" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Envolvência e Exterior</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 9;">
-                <img src="{{ url_for('static', filename='images/1.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Detalhes da Moradia</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/1.jpeg') }}" alt="Foto 2" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Detalhes da Moradia</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 8;">
-                <img src="{{ url_for('static', filename='images/3.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Ambiente Confortável</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/3.jpeg') }}" alt="Foto 3" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Ambiente Confortável</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 7;">
-                <img src="{{ url_for('static', filename='images/4.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Quartos Luminosos</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/4.jpeg') }}" alt="Foto 4" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Quartos Luminosos</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 6;">
-                <img src="{{ url_for('static', filename='images/5.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Áreas de Descanso</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/5.jpeg') }}" alt="Foto 5" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Áreas de Descanso</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 5;">
-                <img src="{{ url_for('static', filename='images/6.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Salas e Convívio</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/6.jpeg') }}" alt="Foto 6" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Salas e Convívio</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 4;">
-                <img src="{{ url_for('static', filename='images/7.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Interior Acolhedor</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/7.jpeg') }}" alt="Foto 7" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Interior Acolhedor</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 3;">
-                <img src="{{ url_for('static', filename='images/8.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Requintado e Amplo</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/8.jpeg') }}" alt="Foto 8" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Requintado e Amplo</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 2;">
-                <img src="{{ url_for('static', filename='images/9.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Pormenores de Decoração</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/9.jpeg') }}" alt="Foto 9" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Pormenores de Decoração</span></div>
             </div>
-            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 1;">
-                <img src="{{ url_for('static', filename='images/10.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Espaços Luminosos</span></div>
+            <div class="min-w-[300px] sm:min-w-[400px] h-[350px] flex-shrink-0 snap-start rounded-3xl overflow-hidden shadow-lg border border-slate-200 relative">
+                <img src="{{ url_for('static', filename='images/10.jpeg') }}" alt="Foto 10" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-6"><span class="text-white font-serif text-lg font-medium">Espaços Luminosos</span></div>
             </div>
         </div>
-        <p class="text-xs text-slate-400 mt-6">Dica: Toque e arraste para o lado para mudar de fotografia</p>
-
-        <script>
-            const cards = document.querySelectorAll('.photo-card');
-            cards.forEach((card) => {
-                let startX = 0;
-                let currentX = 0;
-                let isDragging = false;
-
-                card.addEventListener('pointerdown', (e) => {
-                    isDragging = true;
-                    startX = e.clientX;
-                    card.setPointerCapture(e.pointerId);
-                });
-
-                card.addEventListener('pointermove', (e) => {
-                    if (!isDragging) return;
-                    currentX = e.clientX - startX;
-                    const rotate = currentX * 0.05;
-                    card.style.transform = `translateX(${currentX}px) rotate(${rotate}deg)`;
-                });
-
-                card.addEventListener('pointerup', (e) => {
-                    if (!isDragging) return;
-                    isDragging = false;
-                    if (Math.abs(currentX) > 100) {
-                        const direction = currentX > 0 ? 1 : -1;
-                        card.style.transform = `translateX(${direction * 500}px) rotate(${direction * 30}deg)`;
-                        card.style.opacity = '0';
-                        setTimeout(() => {
-                            card.style.zIndex = '-1';
-                            card.style.transform = 'translateX(0) rotate(0)';
-                            card.style.opacity = '1';
-                            document.getElementById('card-stack').prepend(card);
-                        }, 300);
-                    } else {
-                        card.style.transform = 'translateX(0) rotate(0)';
-                    }
-                    currentX = 0;
-                });
-            });
-        </script>
     </section>
 
     <!-- TARIFAS E ÉPOCAS -->
