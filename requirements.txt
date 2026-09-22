@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 Flask==3.0.2
 gunicorn==21.2.0
+=======
+flask
+resend
+>>>>>>> ebbe5371b6e6473ff445f44e248c216190c6c7c1
+resend

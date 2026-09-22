@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt" class="scroll-smooth">
 <head>
@@ -378,4 +379,255 @@
     </footer>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa da Serra — Refúgio de Montanha | Serra da Estrela</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .serif-title { font-family: 'Playfair Display', serif; }
+        .hero-bg {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-white">
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="serif-title text-2xl font-bold tracking-wider text-white">
+                CASA DA <span class="text-emerald-400 font-normal italic">Serra</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#experiencia" class="hover:text-emerald-400 transition">A Experiência</a>
+                <a href="#comodidades" class="hover:text-emerald-400 transition">Comodidades</a>
+                <a href="#tarifas" class="hover:text-emerald-400 transition">Tarifas & Épocas</a>
+                <a href="#localizacao" class="hover:text-emerald-400 transition">Localização</a>
+            </nav>
+            <a href="#reservas" class="bg-emerald-600 hover:bg-emerald-500 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-lg shadow-emerald-900/20">
+                Reservar Estadia
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-bg min-h-screen flex items-center justify-center text-center px-6 pt-20">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <span class="inline-block uppercase tracking-[0.3em] text-emerald-400 text-xs font-semibold bg-emerald-950/80 px-4 py-1.5 rounded-full border border-emerald-800/50">
+                Covilhã • Serra da Estrela
+            </span>
+            <h1 class="serif-title text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight">
+                O seu refúgio de montanha <span class="italic font-normal text-emerald-300">com total exclusividade</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
+                Uma imponente moradia T7 concebida para acolher a sua família e amigos em pleno coração da Serra da Estrela. Conforto absoluto, lareira acesa e paisagens deslumbrantes.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#reservas" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-semibold transition shadow-xl shadow-emerald-900/30">
+                    Consultar Disponibilidade
+                </a>
+                <a href="#experiencia" class="w-full sm:w-auto bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-slate-700 px-8 py-4 rounded-full font-semibold transition">
+                    Conhecer a Casa
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALERTA DE SUCESSO DO FORMULÁRIO -->
+    {% if mensagem_sucesso %}
+    <div class="max-w-3xl mx-auto mt-12 px-6">
+        <div class="bg-emerald-950/90 border border-emerald-500 text-emerald-200 p-6 rounded-2xl text-center shadow-2xl">
+            <p class="text-lg font-medium">{{ mensagem_sucesso }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- A EXPERIÊNCIA / APRESENTAÇÃO -->
+    <section id="experiencia" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="space-y-6">
+                <span class="text-emerald-400 font-semibold uppercase tracking-widest text-xs">Exclusividade T7</span>
+                <h2 class="serif-title text-3xl sm:text-5xl font-bold text-white leading-tight">
+                    Espaço, conforto e a magia da neve à sua espera.
+                </h2>
+                <p class="text-slate-300 font-light leading-relaxed">
+                    Faça uma pausa e venha desfrutar de dias relaxantes na Serra da Estrela[cite: 18]. A **Casa da Serra** é uma moradia totalmente remodelada e equipada com 3 WCs, 7 quartos com capacidade para grandes grupos, camas confortáveis com lençóis e cobertores de alta qualidade, incluindo uma magnífica **suíte privativa com WC**[cite: 18].
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-slate-800">
+                    <div>
+                        <h4 class="serif-title text-3xl font-bold text-emerald-400">7 Quartos</h4>
+                        <p class="text-sm text-slate-400 mt-1">Capacidade alargada T7 com total privacidade.</p>
+                    </div>
+                    <div>
+                        <h4 class="serif-title text-3xl font-bold text-emerald-400">3 WCs</h4>
+                        <p class="text-sm text-slate-400 mt-1">Inclui suíte privativa e wc de apoio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-emerald-600 to-teal-600 opacity-30 blur-xl"></div>
+                <div class="relative bg-slate-900 border border-slate-800 rounded-3xl p-4 sm:p-6 overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" alt="Interior aconchegante" class="rounded-2xl w-full h-[380px] object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMODIDADES -->
+    <section id="comodidades" class="py-24 bg-slate-900/50 border-y border-slate-800/60 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-emerald-400 font-semibold uppercase tracking-widest text-xs">Comodidades de Excelência</span>
+                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-white">Pensado ao pormenor para o seu bem-estar</h2>
+                <p class="text-slate-400">Tudo o que precisa para se sentir em casa, mesmo no topo da montanha.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-4 hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-950 flex items-center justify-center text-emerald-400 text-xl font-bold">🔥</div>
+                    <h3 class="serif-title text-xl font-bold text-white">Lareira & Pellets de Oferta</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Desfrute de noites acolhosas junto à lareira. Oferecemos cartuxa de pellets (cerca de 15 sacos de oferta) para que o calor nunca falhe[cite: 18].
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-4 hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-950 flex items-center justify-center text-emerald-400 text-xl font-bold">🍳</div>
+                    <h3 class="serif-title text-xl font-bold text-white">Cozinha Equipada</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Cozinha totalmente equipada com eletrodomésticos modernos, louça completa e máquina de café para começar as manhãs da melhor forma[cite: 18].
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl space-y-4 hover:border-emerald-500/50 transition">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-950 flex items-center justify-center text-emerald-400 text-xl font-bold">📶</div>
+                    <h3 class="serif-title text-xl font-bold text-white">Conectividade & Lazer</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Mantenha-se entretido e conectado com televisão e Wi-Fi de alta velocidade disponíveis em toda a moradia.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIFAS E ÉPOCAS -->
+    <section id="tarifas" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span class="text-emerald-400 font-semibold uppercase tracking-widest text-xs">Preçário Transparente</span>
+            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-white">Tarifas por Época</h2>
+            <p class="text-slate-400">Valores adaptados à época do ano e número de hóspedes[cite: 18].</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Época Baixa -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <span class="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full font-medium">01/04 a 01/10</span>
+                    <h3 class="serif-title text-2xl font-bold text-white">Época Baixa</h3>
+                    <div class="text-3xl font-bold text-emerald-400">250€ <span class="text-sm font-normal text-slate-400">/ noite</span></div>
+                    <p class="text-slate-400 text-sm">Mínimo de 2 noites. Para estadias superiores a 2 noites, preço a combinar[cite: 18].</p>
+                </div>
+                <a href="#reservas" class="mt-8 block text-center bg-slate-800 hover:bg-emerald-600 text-white py-3 rounded-xl font-semibold transition text-sm">Reservar Esta Época</a>
+            </div>
+
+            <!-- Época Alta -->
+            <div class="bg-emerald-950/40 border-2 border-emerald-500/50 rounded-3xl p-8 flex flex-col justify-between relative shadow-xl">
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 font-bold text-xs uppercase px-4 py-1 rounded-full">
+                    Mais Procurada (Neve)
+                </div>
+                <div class="space-y-4 pt-2">
+                    <span class="bg-emerald-900 text-emerald-200 text-xs px-3 py-1 rounded-full font-medium">01/10 a 01/04</span>
+                    <h3 class="serif-title text-2xl font-bold text-white">Época Alta</h3>
+                    <div class="text-3xl font-bold text-emerald-400">350€ <span class="text-sm font-normal text-slate-400">/ noite</span></div>
+                    <p class="text-slate-400 text-sm">Mínimo de 2 noites. Para estadias superiores a 2 noites, preço a combinar[cite: 18].</p>
+                </div>
+                <a href="#reservas" class="mt-8 block text-center bg-emerald-600 hover:bg-emerald-500 text-white py-3 rounded-xl font-semibold transition text-sm shadow-lg shadow-emerald-900/30">Reservar Época Alta</a>
+            </div>
+
+            <!-- Épocas Festivas -->
+            <div class="bg-slate-900 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <span class="bg-slate-800 text-slate-300 text-xs px-3 py-1 rounded-full font-medium">Datas Especiais</span>
+                    <h3 class="serif-title text-2xl font-bold text-white">Épocas Festivas</h3>
+                    <div class="text-xl font-semibold text-emerald-400 pt-2">Sob Consulta</div>
+                    <p class="text-slate-400 text-sm">Carnaval, Páscoa, Natal e Passagem de Ano. Garanta a sua data com antecedência[cite: 18].</p>
+                </div>
+                <a href="#reservas" class="mt-8 block text-center bg-slate-800 hover:bg-emerald-600 text-white py-3 rounded-xl font-semibold transition text-sm">Consultar Datas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE RESERVAS -->
+    <section id="reservas" class="py-24 bg-slate-900/60 border-t border-slate-800 px-6">
+        <div class="max-w-3xl mx-auto bg-slate-950 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl">
+            <div class="text-center mb-10 space-y-3">
+                <h2 class="serif-title text-3xl font-bold text-white">Reserve a sua estadia na Serra</h2>
+                <p class="text-slate-400 text-sm">Preencha o formulário abaixo e entraremos em contacto para confirmar todos os detalhes.</p>
+            </div>
+
+            <form method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Nome Completo</label>
+                        <input type="text" name="nome" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Telemóvel</label>
+                        <input type="tel" name="telefone" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">E-mail</label>
+                        <input type="email" name="email" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Número de Hóspedes</label>
+                        <input type="number" name="pessoas" min="1" max="20" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Data de Check-in</label>
+                        <input type="date" name="checkin" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Data de Check-out</label>
+                        <input type="date" name="checkout" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-400 font-semibold mb-2">Mensagem / Observações (Opcional)</label>
+                    <textarea name="mensagem" rows="4" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition" placeholder="Dúvidas sobre datas, épocas festivas ou pedidos especiais..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold py-4 rounded-xl transition shadow-xl shadow-emerald-900/30">
+                    Enviar Pedido de Reserva
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12 px-6 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="serif-title text-lg font-bold text-white tracking-wider">CASA DA <span class="text-emerald-400 font-normal italic">Serra</span></p>
+            <p>© 2026 Casa da Serra. Todos os direitos reservados. Covilhã, Serra da Estrela.</p>
+        </div>
+    </footer>
+
+</body>
+>>>>>>> ebbe5371b6e6473ff445f44e248c216190c6c7c1
 </html>
