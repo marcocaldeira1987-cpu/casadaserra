@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa da Serra — Refúgio Luminoso | Penhas da Saúde, Serra da Estrela</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .serif-title { font-family: 'Playfair Display', serif; }
+        .card-stack { perspective: 1000px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white relative">
+
+    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+    <a href="https://wa.me/351968991834?text=Olá,%20gostaria%20de%20obter%20mais%20informações%20sobre%20a%20Casa%20da%20Serra%20(Penhas%20da%20Saúde)." target="_blank" class="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-500 text-white p-4 rounded-full shadow-2xl transition transform hover:scale-110 flex items-center justify-center group" aria-label="Contacto WhatsApp">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-sm font-semibold pl-0 group-hover:pl-2">Dúvidas? Fale connosco</span>
+    </a>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="serif-title text-2xl font-bold tracking-tight text-slate-900">
+                CASA DA <span class="text-emerald-700 font-normal italic">Serra</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#experiencia" class="hover:text-emerald-700 transition">A Casa</a>
+                <a href="#comodidades" class="hover:text-emerald-700 transition">Comodidades</a>
+                <a href="#galeria" class="hover:text-emerald-700 transition">Galeria</a>
+                <a href="#tarifas" class="hover:text-emerald-700 transition">Tarifas & Épocas</a>
+                <a href="#reservas" class="hover:text-emerald-700 transition">Reservas</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/351968991834?text=Olá,%20gostaria%20de%20obter%20informações%20sobre%20a%20Casa%20da%20Serra." target="_blank" class="hidden sm:inline-flex items-center text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-3 py-2 rounded-full hover:bg-emerald-100 transition">
+                    💬 WhatsApp
+                </a>
+                <a href="#reservas" class="bg-emerald-700 hover:bg-emerald-800 text-white px-5 py-2.5 rounded-full text-sm font-semibold transition shadow-md shadow-emerald-700/10">
+                    Reservar Estadia
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative h-screen flex items-center justify-center text-center overflow-hidden">
+        
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
+            <source src="{{ url_for('static', filename='images/drone_serra.mp4') }}" type="video/mp4">
+        </video>
+
+        <div id="intro-foto" class="absolute inset-0 z-10 transition-opacity duration-1000 ease-in-out bg-cover bg-center" style="background-image: url('{{ url_for('static', filename='images/fachada.jpeg') }}');">
+            <div class="absolute inset-0 bg-slate-950/30"></div>
+        </div>
+
+        <div class="relative z-20 max-w-4xl mx-auto px-6 space-y-6 text-white pt-16">
+            <span class="inline-block uppercase tracking-[0.25em] text-emerald-300 text-xs font-bold bg-emerald-950/60 backdrop-blur-md px-4 py-1.5 rounded-full border border-emerald-500/30">
+                T7 Penhas Da Saúde • Serra Da Estrela
+            </span>
+            <h1 class="serif-title text-4xl sm:text-6xl lg:text-7xl font-bold tracking-tight leading-tight drop-shadow-md">
+                O encanto da montanha <span class="italic font-normal text-emerald-300">com total conforto</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-slate-100 max-w-2xl mx-auto font-light leading-relaxed drop-shadow">
+                Um refúgio T7 imponente e luminoso nas Penhas da Saúde, ideal para reunir a família e amigos em plena Serra da Estrela.
+            </p>
+            <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#reservas" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-4 rounded-full font-semibold transition shadow-xl shadow-emerald-900/30">
+                    Ver Disponibilidade
+                </a>
+                <a href="https://wa.me/351968991834?text=Olá,%20gostaria%20de%20pedir%20informações%20sobre%20a%20Casa%20da%20Serra." target="_blank" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-semibold transition flex items-center justify-center gap-2">
+                    <span>💬 Pedir Informações (WhatsApp)</span>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                setTimeout(() => {
+                    const fotoIntro = document.getElementById('intro-foto');
+                    if (fotoIntro) {
+                        fotoIntro.style.opacity = '0';
+                        setTimeout(() => { fotoIntro.style.display = 'none'; }, 1000);
+                    }
+                }, 2000);
+            });
+        </script>
+    </section>
+
+    {% if mensagem_sucesso %}
+    <div class="max-w-3xl mx-auto mt-12 px-6">
+        <div class="bg-emerald-50 border border-emerald-300 text-emerald-800 p-6 rounded-2xl text-center shadow-md">
+            <p class="text-lg font-medium">{{ mensagem_sucesso }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- A EXPERIÊNCIA -->
+    <section id="experiencia" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div class="space-y-6">
+                <span class="text-emerald-700 font-bold uppercase tracking-widest text-xs">Exclusividade T7 na Serra</span>
+                <h2 class="serif-title text-3xl sm:text-5xl font-bold text-slate-900 leading-tight">
+                    Espaços amplos, luz natural e aconchego.
+                </h2>
+                <p class="text-slate-600 font-light leading-relaxed text-base">
+                    Localizada nas prestigiadas Penhas da Saúde, a Casa da Serra dispõe de 7 quartos confortáveis, incluindo uma suíte privativa com WC, e mais 2 WCs de apoio. Um refúgio pensado ao pormenor para estadias memoráveis na Serra da Estrela.
+                </p>
+                <div class="grid grid-cols-2 gap-6 pt-6 border-t border-slate-200">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 class="serif-title text-3xl font-bold text-emerald-700">7 Quartos</h4>
+                        <p class="text-sm text-slate-500 mt-1">Capacidade alargada e total privacidade.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+                        <h4 class="serif-title text-3xl font-bold text-emerald-700">3 WCs</h4>
+                        <p class="text-sm text-slate-500 mt-1">Inclui suíte privativa e wc de apoio.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-1 rounded-3xl bg-gradient-to-tr from-emerald-200 to-teal-100 opacity-70 blur-lg"></div>
+                <div class="relative bg-white border border-slate-200 rounded-3xl p-4 sm:p-6 shadow-xl">
+                    <img src="{{ url_for('static', filename='images/fachada.jpeg') }}" alt="Casa da Serra" class="rounded-2xl w-full h-[380px] object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMODIDADES -->
+    <section id="comodidades" class="py-24 bg-white border-y border-slate-200 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-emerald-700 font-bold uppercase tracking-widest text-xs">Comodidades de Excelência</span>
+                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-slate-900">Tudo o que precisa para se sentir em casa</h2>
+                <p class="text-slate-600">Conforto térmico, modernidade e praticidade em plena montanha.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl space-y-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold">🔥</div>
+                    <h3 class="serif-title text-xl font-bold text-slate-900">Lareira & Pellets de Oferta</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Oferecemos cerca de 15 sacos de pellets incluídos para aquecer os seus dias de inverno junto à lareira.</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl space-y-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold">🍳</div>
+                    <h3 class="serif-title text-xl font-bold text-slate-900">Cozinha Equipada</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Cozinha totalmente equipada com eletrodomésticos modernos e máquina de café pronta a usar.</p>
+                </div>
+                <div class="bg-slate-50 border border-slate-200 p-8 rounded-3xl space-y-4 shadow-sm">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-100 flex items-center justify-center text-emerald-700 text-xl font-bold">📶</div>
+                    <h3 class="serif-title text-xl font-bold text-slate-900">Conectividade & Lazer</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Mantenha-se conectado com televisão de ecrã plano e Wi-Fi de alta velocidade em toda a habitação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERIA INTERATIVA (SWIPE STACK) -->
+    <section id="galeria" class="py-24 px-6 max-w-4xl mx-auto text-center">
+        <div class="mb-12 space-y-4">
+            <span class="text-emerald-700 font-bold uppercase tracking-widest text-xs">Experiência Imersiva</span>
+            <h2 class="serif-title text-3xl sm:text-4xl font-bold text-slate-900">Galeria Interativa</h2>
+            <p class="text-slate-600 text-sm">Arraste ou clique no cartão para ver a fotografia seguinte e saltar para o próximo espaço.</p>
+        </div>
+
+        <div class="card-stack relative w-full max-w-xl mx-auto h-[450px] sm:h-[500px] flex items-center justify-center cursor-grab active:cursor-grabbing" id="card-stack">
+            
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 10;">
+                <img src="{{ url_for('static', filename='images/0.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Envolvência e Exterior</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 9;">
+                <img src="{{ url_for('static', filename='images/1.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Detalhes da Moradia</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 8;">
+                <img src="{{ url_for('static', filename='images/3.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Ambiente Confortável</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 7;">
+                <img src="{{ url_for('static', filename='images/4.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Quartos Luminosos</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 6;">
+                <img src="{{ url_for('static', filename='images/5.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Áreas de Descanso</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 5;">
+                <img src="{{ url_for('static', filename='images/6.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Salas e Convívio</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 4;">
+                <img src="{{ url_for('static', filename='images/7.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Interior Acolhedor</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 3;">
+                <img src="{{ url_for('static', filename='images/8.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Requintado e Amplo</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 2;">
+                <img src="{{ url_for('static', filename='images/9.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Pormenores de Decoração</span></div>
+            </div>
+            <div class="photo-card absolute inset-0 w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 transition-transform duration-300 ease-out" style="z-index: 1;">
+                <img src="{{ url_for('static', filename='images/10.jpeg') }}" alt="Casa da Serra" class="w-full h-full object-cover pointer-events-none">
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent flex items-end p-8"><span class="text-white font-serif text-xl font-medium">Espaços Luminosos</span></div>
+            </div>
+
+        </div>
+
+        <p class="text-xs text-slate-400 mt-6">Dica: Toque e arraste para o lado para mudar de fotografia</p>
+
+        <script>
+            const cards = document.querySelectorAll('.photo-card');
+            cards.forEach((card) => {
+                let startX = 0;
+                let currentX = 0;
+                let isDragging = false;
+
+                card.addEventListener('pointerdown', (e) => {
+                    isDragging = true;
+                    startX = e.clientX;
+                    card.setPointerCapture(e.pointerId);
+                });
+
+                card.addEventListener('pointermove', (e) => {
+                    if (!isDragging) return;
+                    currentX = e.clientX - startX;
+                    const rotate = currentX * 0.05;
+                    card.style.transform = `translateX(${currentX}px) rotate(${rotate}deg)`;
+                });
+
+                card.addEventListener('pointerup', (e) => {
+                    if (!isDragging) return;
+                    isDragging = false;
+                    
+                    if (Math.abs(currentX) > 100) {
+                        const direction = currentX > 0 ? 1 : -1;
+                        card.style.transform = `translateX(${direction * 500}px) rotate(${direction * 30}deg)`;
+                        card.style.opacity = '0';
+                        
+                        setTimeout(() => {
+                            card.style.zIndex = '-1';
+                            card.style.transform = 'translateX(0) rotate(0)';
+                            card.style.opacity = '1';
+                            document.getElementById('card-stack').prepend(card);
+                        }, 300);
+                    } else {
+                        card.style.transform = 'translateX(0) rotate(0)';
+                    }
+                    currentX = 0;
+                });
+            });
+        </script>
+    </section>
+
+    <!-- TARIFAS E ÉPOCAS -->
+    <section id="tarifas" class="py-24 bg-white border-y border-slate-200 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-emerald-700 font-bold uppercase tracking-widest text-xs">Preçário Transparente</span>
+                <h2 class="serif-title text-3xl sm:text-4xl font-bold text-slate-900">Tarifas por Época</h2>
+                <p class="text-slate-600">Valores adaptados à época do ano e número de hóspedes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <span class="bg-white text-slate-700 text-xs px-3 py-1 rounded-full font-semibold border border-slate-200">01/04 a 01/10</span>
+                        <h3 class="serif-title text-2xl font-bold text-slate-900">Época Baixa</h3>
+                        <div class="text-3xl font-bold text-emerald-700">250€ <span class="text-sm font-normal text-slate-500">/ noite</span></div>
+                        <p class="text-slate-600 text-sm">Mínimo de 2 noites. Para estadias superiores, preço a combinar.</p>
+                    </div>
+                    <a href="#reservas" class="mt-8 block text-center bg-white hover:bg-emerald-700 hover:text-white text-slate-800 border border-slate-300 py-3 rounded-xl font-semibold transition text-sm">Reservar Esta Época</a>
+                </div>
+
+                <div class="bg-emerald-900 text-white rounded-3xl p-8 flex flex-col justify-between relative shadow-xl transform md:-translate-y-2">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 font-bold text-xs uppercase px-4 py-1 rounded-full shadow-md">
+                        Mais Procurada (Neve)
+                    </div>
+                    <div class="space-y-4 pt-2">
+                        <span class="bg-emerald-800 text-emerald-200 text-xs px-3 py-1 rounded-semibold">01/10 a 01/04</span>
+                        <h3 class="serif-title text-2xl font-bold text-white">Época Alta</h3>
+                        <div class="text-3xl font-bold text-emerald-300">350€ <span class="text-sm font-normal text-slate-300">/ noite</span></div>
+                        <p class="text-slate-300 text-sm">Mínimo de 2 noites. Para estadias superiores, preço a combinar.</p>
+                    </div>
+                    <a href="#reservas" class="mt-8 block text-center bg-emerald-500 hover:bg-emerald-400 text-slate-950 py-3 rounded-bold transition text-sm shadow-md">Reservar Época Alta</a>
+                </div>
+
+                <div class="bg-slate-50 border border-slate-200 rounded-3xl p-8 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <span class="bg-white text-slate-700 text-xs px-3 py-1 rounded-full font-semibold border border-slate-200">Datas Especiais</span>
+                        <h3 class="serif-title text-2xl font-bold text-slate-900">Épocas Festivas</h3>
+                        <div class="text-xl font-semibold text-emerald-700 pt-2">Sob Consulta</div>
+                        <p class="text-slate-600 text-sm">Carnaval, Páscoa, Natal e Passagem de Ano. Garanta a sua data com antecedência.</p>
+                    </div>
+                    <a href="#reservas" class="mt-8 block text-center bg-white hover:bg-emerald-700 hover:text-white text-slate-800 border border-slate-300 py-3 rounded-xl font-semibold transition text-sm">Consultar Datas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE RESERVAS E WHATSAPP DIRETO -->
+    <section id="reservas" class="py-24 px-6 max-w-3xl mx-auto">
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 sm:p-12 shadow-lg">
+            <div class="text-center mb-8 space-y-3">
+                <h2 class="serif-title text-3xl font-bold text-slate-900">Reserve a sua estadia T7</h2>
+                <p class="text-slate-600 text-sm">Preencha o formulário abaixo ou fale diretamente connosco.</p>
+            </div>
+
+            <!-- Caixa de Acesso Rápido WhatsApp -->
+            <div class="mb-10 bg-emerald-50 border border-emerald-200 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-center sm:text-left">
+                    <h4 class="font-bold text-slate-900 text-base">Prefere falar primeiro sem compromisso?</h4>
+                    <p class="text-slate-600 text-xs mt-1">Tire dúvidas sobre disponibilidade ou valores diretamente via WhatsApp (968 991 834).</p>
+                </div>
+                <a href="https://wa.me/351968991834?text=Olá,%20gostaria%20de%20obter%20informações%20sobre%20a%20Casa%20da%20Serra." target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-6 py-3 rounded-xl text-sm transition shadow-md whitespace-nowrap flex items-center gap-2">
+                    💬 Abrir WhatsApp
+                </a>
+            </div>
+
+            <form method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">Nome Completo</label>
+                        <input type="text" name="nome" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">Telemóvel (Contacto)</label>
+                        <input type="tel" name="telefone" required value="968 991 834" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">E-mail</label>
+                        <input type="email" name="email" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">Número de Hóspedes</label>
+                        <input type="number" name="pessoas" min="1" max="20" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">Data de Check-in</label>
+                        <input type="date" name="checkin" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">Data de Check-out</label>
+                        <input type="date" name="checkout" required class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs uppercase tracking-wider text-slate-600 font-semibold mb-2">Mensagem / Observações (Opcional)</label>
+                    <textarea name="mensagem" rows="4" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-4 py-3 text-slate-800 focus:outline-none focus:border-emerald-600 transition" placeholder="Dúvidas sobre datas ou pedidos especiais..."></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-semibold py-4 rounded-xl transition shadow-lg shadow-emerald-700/25">
+                    Enviar Pedido de Reserva
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-12 px-6 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="serif-title text-lg font-bold text-slate-900 tracking-wider">CASA DA <span class="text-emerald-700 font-normal italic">Serra</span></p>
+            <p class="text-xs text-slate-500">T7 Penhas Da Saúde • Serra Da Estrela | Telemóvel: 968 991 834</p>
+            <p>© 2026 Casa da Serra. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
